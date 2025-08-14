@@ -9,13 +9,13 @@ StudyMantra is a fully functional EdTech platform that enables users to create, 
 
 ## Introduction
 
-StudyNotion aims to provide a seamless and interactive learning experience for students, making education more accessible and engaging. Additionally, the platform serves as a platform for instructors to showcase their expertise and connect with learners across the globe.
+StudyMantra aims to provide a seamless and interactive learning experience for students, making education more accessible and engaging. Additionally, the platform serves as a platform for instructors to showcase their expertise and connect with learners across the globe.
 
 In the following sections, we will cover the technical details of the platform, including the system architecture, API design, installation, usage instructions, and potential future enhancements.
 
 ## System Architecture
 
-The StudyNotion EdTech platform consists of three main components: the front-end, the back-end, and the database. The platform follows a client-server architecture, with the front-end serving as the client and the back-end and database serving as the server.
+The StudyMantra EdTech platform consists of three main components: the front-end, the back-end, and the database. The platform follows a client-server architecture, with the front-end serving as the client and the back-end and database serving as the server.
 
 ### Front-end
 
@@ -38,7 +38,7 @@ The database for the platform is built using MongoDB, a NoSQL database that prov
 
 ## API Design
 
-The StudyNotion platform's API is designed following the REST architectural style. The API is implemented using Node.js and Express.js. It uses JSON for data exchange and follows standard HTTP request methods such as GET, POST, PUT, and DELETE.
+The StudyMantra platform's API is designed following the REST architectural style. The API is implemented using Node.js and Express.js. It uses JSON for data exchange and follows standard HTTP request methods such as GET, POST, PUT, and DELETE.
 
 
 ## Configuration
@@ -49,9 +49,9 @@ The StudyNotion platform's API is designed following the REST architectural styl
 
 ## Usage
 
-1. Start the server: `npm start`
-2. Open a new terminal and navigate to the `client` directory: `cd client`
-3. Start the React development server: `npm start`
+1. Start the React development server: `npm start`
+2. Open a new terminal and navigate to the `server` directory: `cd server`
+3. Start the server: `npm start`
 
 Access the application in your browser at `http://localhost:3000`.
 
