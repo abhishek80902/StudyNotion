@@ -18,15 +18,20 @@ const Catalog = () => {
     const [categoryId, setCategoryId] = useState("");
 
     //Fetch all categories
-    useEffect(()=> {
-        const getCategories = async() => {
-            const res = await apiConnector("GET", categories.CATEGORIES_API);
-            const category_id = 
-            res?.data?.data?.filter((ct) => ct.name.split(" ").join("-").toLowerCase() === catalogName)[0]._id;
-            setCategoryId(category_id);
-        }
-        getCategories();
-    },[catalogName]);
+    useEffect(() => {
+  const getCategories = async () => {
+    try {
+      const res = await apiConnector("GET", categories.CATEGORIES_API);
+      const matchedCategory = res?.data?.data?.find(
+        (ct) => ct.name.split(" ").join("-").toLowerCase() === catalogName
+      );
+      setCategoryId(matchedCategory?._id || "");
+    } catch (err) {
+      console.log("Error fetching categories", err);
+    }
+  };
+  getCategories();
+}, [catalogName]);
 
     useEffect(() => {
         const getCategoryDetails = async() => {
@@ -104,7 +109,7 @@ const Catalog = () => {
             </div>
             <div>
               <CourseSlider
-                Courses={catalogPageData?.data?.selectedCategory?.courses}
+                Courses={catalogPageData?.data?.selectedCategory?.courses || []}
               />
             </div>
           </div>
@@ -115,7 +120,7 @@ const Catalog = () => {
             </div>
             <div className="py-8">
               <CourseSlider
-                Courses={catalogPageData?.data?.differentCategory?.courses}
+                Courses={catalogPageData?.data?.differentCategory?.courses || []}
               />
             </div>
           </div>
