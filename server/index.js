@@ -27,7 +27,7 @@ app.use(
    cors({
         origin: [
             "http://localhost:3000",        // for local testing
-            "https://study-notion-edseven.vercel.app/"  // replace with actual Vercel URL
+            "https://study-notion-edseven.vercel.app"  // replace with actual Vercel URL
         ],
         credentials: true,
     })
