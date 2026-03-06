@@ -55,6 +55,8 @@ function Navbar() {
           <ul className="flex gap-x-6 text-richblack-25">
             {NavbarLinks.map((link, index) => (
               <li key={index}>
+
+                {/* Catalog Dropdown */}
                 {link.title === "Catalog" ? (
                   <div
                     className={`group relative flex cursor-pointer items-center gap-1 ${
@@ -95,11 +97,15 @@ function Navbar() {
                     </div>
                   </div>
                 ) : link.external ? (
-                  <a href={link.path}>
-                    <p className="text-richblack-25 hover:text-yellow-25">
-                      {link.title}
-                    </p>
-                  </a>
+
+                  /* External Link Fix */
+                  <p
+                    onClick={() => (window.location.href = link.path)}
+                    className="cursor-pointer text-richblack-25 hover:text-yellow-25"
+                  >
+                    {link.title}
+                  </p>
+
                 ) : (
                   <Link to={link?.path}>
                     <p
@@ -120,6 +126,7 @@ function Navbar() {
 
         {/* Login / Signup / Dashboard */}
         <div className="hidden items-center gap-x-4 md:flex">
+
           {user && user?.accountType !== ACCOUNT_TYPE.INSTRUCTOR && (
             <Link to="/dashboard/cart" className="relative">
               <AiOutlineShoppingCart className="text-2xl text-richblack-100" />
@@ -150,6 +157,7 @@ function Navbar() {
           {token !== null && <ProfileDropdown />}
         </div>
 
+        {/* Mobile Menu Button */}
         <button className="mr-4 md:hidden">
           <AiOutlineMenu fontSize={24} fill="#AFB2BF" />
         </button>
