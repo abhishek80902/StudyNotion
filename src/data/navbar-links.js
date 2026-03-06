@@ -8,7 +8,7 @@ export const NavbarLinks = [
   },
   {
     title: "Generate MCQ",
-    path: "https://mcq-generator-v.streamlit.app/",
+    path: "https://studymantra-mcqgen.streamlit.app/",
     external: true,
   },
   {
