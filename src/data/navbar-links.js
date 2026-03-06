@@ -5,7 +5,6 @@ export const NavbarLinks = [
   },
   {
     title: "Catalog",
-    // path: '/catalog',
   },
   {
     title: "About Us",
@@ -14,5 +13,10 @@ export const NavbarLinks = [
   {
     title: "Contact Us",
     path: "/contact",
+  },
+  {
+    title: "Generate Quiz",
+    path: "https://mcq-generator-v.streamlit.app/",
+    external: true,
   },
 ];
