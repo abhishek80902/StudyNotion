@@ -101,29 +101,28 @@ function Navbar() {
                 ) : link.external ? (
 
                   /* External Link (Generate Quiz) */
-                  <a
-                    href={link.path}
-                    className="text-yellow-50 font-semibold hover:text-yellow-25"
-                  >
-                    {link.title}
-                  </a>
-
-                ) : (
-
-                  /* Normal Internal Links */
-                  <Link to={link?.path}>
-                    <p
-                      className={`${
-                        matchRoute(link?.path)
-                          ? "text-yellow-25"
-                          : "text-richblack-25"
-                      }`}
-                    >
-                      {link.title}
-                    </p>
-                  </Link>
-
-                )}
+                  {link.external ? (
+  <a
+    href={link.path}
+    target="_self"
+    rel="noopener noreferrer"
+    className="text-yellow-50 font-semibold hover:text-yellow-25"
+  >
+    {link.title}
+  </a>
+) : (
+  <Link to={link?.path}>
+    <p
+      className={`${
+        matchRoute(link?.path)
+          ? "text-yellow-25"
+          : "text-richblack-25"
+      }`}
+    >
+      {link.title}
+    </p>
+  </Link>
+)}
 
               </li>
             ))}
