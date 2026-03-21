@@ -100,7 +100,7 @@ function Navbar() {
 
                   /* External Link Fix */
                   <p
-                    onClick={() => (window.location.href = link.path)}
+                    onClick={() => window.open(link.path, "_blank")}
                     className="cursor-pointer text-richblack-25 hover:text-yellow-25"
                   >
                     {link.title}
