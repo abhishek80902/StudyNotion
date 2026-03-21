@@ -100,7 +100,9 @@ function Navbar() {
 
                   /* External Link Fix */
                   <p
-                    onClick={() => window.open(link.path, "_blank")}
+                   onClick={() =>
+    window.open("https://studymantra-mcqgen.streamlit.app/", "_blank")
+  }
                     className="cursor-pointer text-richblack-25 hover:text-yellow-25"
                   >
                     {link.title}
