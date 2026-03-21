@@ -99,8 +99,7 @@ function Navbar() {
                 ) : link.external ? (
 
                   /* External Link Fix */
-                  <p
-                   <a
+                 <a
   href="https://studymantra-mcqgen.streamlit.app/"
   target="_blank"
   rel="noopener noreferrer"
@@ -108,7 +107,6 @@ function Navbar() {
 >
   {link.title}
 </a>
-                  </p>
 
                 ) : (
                   <Link to={link?.path}>
