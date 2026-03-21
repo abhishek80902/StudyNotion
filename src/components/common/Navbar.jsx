@@ -100,12 +100,14 @@ function Navbar() {
 
                   /* External Link Fix */
                   <p
-                   onClick={() =>
-    window.open("https://studymantra-mcqgen.streamlit.app/", "_blank")
-  }
-                    className="cursor-pointer text-richblack-25 hover:text-yellow-25"
-                  >
-                    {link.title}
+                   <a
+  href="https://studymantra-mcqgen.streamlit.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="cursor-pointer text-richblack-25 hover:text-yellow-25"
+>
+  {link.title}
+</a>
                   </p>
 
                 ) : (
